@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Lake Lavon",
+        "county": "Collin",
+        "percentFull": 100,
+        "capacity": 409757,
+        "currentStorage": 409757,
+        "boatRamps": 16,
+        "isPublic": true
+    },
+    {
+        "name": "Lake Ray Robers",
+        "county": "Denton",
+        "percentFull": 97,
+        "capacity": 788167,
+        "currentStorage": 778842,
+        "boatRamps": 24,
+        "isPublic": true
+    },
+    {
+        "name": "Lake Lewisville",
+        "county": "Denton",
+        "percentFull": 100,
+        "capacity": 563228,
+        "currentStorage": 563228,
+        "boatRamps": 31,
+        "isPublic": true
+    },
+    {
+        "name": "Lake Ray Hubbard",
+        "county": "Rockwall",
+        "percentFull": 100,
+        "capacity": 439559,
+        "currentStorage": 439559,
+        "boatRamps": 13,
+        "isPublic": true
+    },
+    {
+        "name": "Grapevine Lake",
+        "county": "Tarrant",
+        "percentFull": 100,
+        "capacity": 163064,
+        "currentStorage": 163064,
+        "boatRamps": 16,
+        "isPublic": true
+    },
+    {
+        "name": "North Lake",
+        "county": "Dallas",
+        "percentFull": 100,
+        "capacity": 5468,
+        "currentStorage": 5468,
+        "boatRamps": 3,
+        "isPublic": false
+    }
+]
