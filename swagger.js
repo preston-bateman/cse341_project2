@@ -5,7 +5,7 @@ const doc = {
         title: 'Lakes Api',
         description: 'Lakes Api'
     },
-    host: 'localhost:3000',
+    host: 'localhost:3001',
     schemes: ['https']
 }
 
