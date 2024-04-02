@@ -11,14 +11,14 @@ router.get('/', (req, res) => {
     res.send('Welcome to the Lakes API')
 })
 
-router.get('/all', lakesController.getAll)
+router.get('/lakes/', lakesController.getAll)
 
-router.get('/:id', lakesController.getSingle)
+router.get('/lakes/:id', lakesController.getSingle)
 
-router.post('/', lakesController.createLake)
+router.post('/lakes/', lakesController.createLake)
 
-router.put('/:id', lakesController.updateLake)
+router.put('/lakes/:id', lakesController.updateLake)
 
-router.delete('/:id', lakesController.deleteLake)
+router.delete('/lakes/:id', lakesController.deleteLake)
 
 module.exports = router

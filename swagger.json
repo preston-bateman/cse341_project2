@@ -8,6 +8,7 @@
   "host": "localhost:8080",
   "basePath": "/",
   "schemes": [
+    "http",
     "https"
   ],
   "paths": {
@@ -15,6 +16,22 @@
       "get": {
         "tags": [],
         "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/lakes/": {
+      "get": {
+        "tags": [
+          "Lakes"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -68,23 +85,7 @@
         }
       }
     },
-    "/all": {
-      "get": {
-        "tags": [
-          "Lakes"
-        ],
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/{id}": {
+    "/lakes/{id}": {
       "get": {
         "tags": [
           "Lakes"
@@ -104,6 +105,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       },

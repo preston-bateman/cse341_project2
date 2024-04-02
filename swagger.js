@@ -5,8 +5,8 @@ const doc = {
         title: 'Lakes Api',
         description: 'Lakes Api'
     },
-    host: 'localhost:3001',
-    schemes: ['https']
+    host: 'localhost:8080',
+    schemes: ['http','https']
 }
 
 const outputFile = './swagger.json'
