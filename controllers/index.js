@@ -72,6 +72,8 @@ const deleteLake = async (req, res) => {
         res.status(400).json(response.error || 'You must enter a valid id')
     }
 
+    const lakeId = new ObjectId(req.params.id)
+
     const response = await mongodb.getDatabase().db('Project2').collection('lakes').deleteOne({ _id: lakeId }, true)
     if (response.deletedCount > 0) {
         res.status(204).send()
