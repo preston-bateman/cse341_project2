@@ -14,7 +14,7 @@ const getSingle = async (req, res) => {
     //#swagger.tags=['Lakes']
     if(!ObjectId.isValid(req.params.id)) {
         res.status(400).json(response.error || 'You must enter a valid id')
-    }
+    }else {
 
     const lakeId = new ObjectId(req.params.id)
     const result = await mongodb.getDatabase().db('Project2').collection('lakes').find({ _id: lakeId })
@@ -22,6 +22,7 @@ const getSingle = async (req, res) => {
         res.setHeader('Content-Type', 'application/json')
         res.status(200).json(lakes[0])
     })
+}
 }
 
 const createLake = async (req, res) => {
