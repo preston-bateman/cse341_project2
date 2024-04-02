@@ -3,7 +3,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
     //#swagger.tags=['Lakes']
-    const result = await mongodb.getDatabase().db().collection('lakes').find()
+    const result = await mongodb.getDatabase().db('Project2').collection('lakes').find()
     result.toArray().then((lakes) => {
         res.setHeader('Content-Type', 'application/json')
         res.status(200).json(lakes)
@@ -12,8 +12,12 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
     //#swagger.tags=['Lakes']
+    if(!ObjectId.isValid(req.params.id)) {
+        res.status(400).json(response.error || 'You must enter a valid id')
+    }
+
     const lakeId = new ObjectId(req.params.id)
-    const result = await mongodb.getDatabase().db().collection('lakes').find({ _id: lakeId })
+    const result = await mongodb.getDatabase().db('Project2').collection('lakes').find({ _id: lakeId })
     result.toArray().then((lakes) => {
         res.setHeader('Content-Type', 'application/json')
         res.status(200).json(lakes[0])
